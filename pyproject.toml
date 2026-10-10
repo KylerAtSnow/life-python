@@ -7,9 +7,7 @@ authors = [
     { name = "Kyler O", email = "kyler.olsen@students.snow.edu" }
 ]
 requires-python = ">=3.14"
-dependencies = [
-    "pytest>=9.1.1",
-]
+dependencies = []
 
 [project.scripts]
 life-python = "life_python:main"
@@ -17,3 +15,8 @@ life-python = "life_python:main"
 [build-system]
 requires = ["uv_build>=0.13.0,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
