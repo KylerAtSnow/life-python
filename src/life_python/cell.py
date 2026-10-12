@@ -9,11 +9,13 @@ if TYPE_CHECKING:
     from life_python.world import World
 
 
-
 @dataclass(frozen=True)
 class Cell:
     x: int
     y: int
+
+    def as_tuple(self) -> tuple[int, int]:
+        return (self.x, self.y)
 
     def neighbors(self) -> set[Cell]:
         return {
