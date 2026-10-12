@@ -1,7 +1,14 @@
 
+from typing import Iterable
 
+from life_python.cell import Cell
 from life_python.world import World
 
+def simulate(iterations: int, starting_cells: Iterable[tuple[int, int]]) -> list[tuple[int, int]]:
+    world = World()
+    for cell in starting_cells:
+        world.add(Cell(*cell))
+    return list(world.iterations(i).living())
 
 def life(i: int = 100_000) -> World:
     world = World()
