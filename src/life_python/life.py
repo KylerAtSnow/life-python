@@ -8,7 +8,7 @@ def simulate(iterations: int, starting_cells: Iterable[tuple[int, int]]) -> list
     world = World()
     for cell in starting_cells:
         world.add(Cell(*cell))
-    return list(world.iterations(i).living())
+    return [i.as_tuple() for i in world.iterations(iterations).living()]
 
 def life(i: int = 100_000) -> World:
     world = World()
