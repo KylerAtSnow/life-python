@@ -3,7 +3,7 @@
 from life_python.world import World
 
 
-def life(i: int = 100) -> World:
+def life(i: int = 100_000) -> World:
     world = World()
     world.add_glider(1,1)
     return world.iterations(i)
