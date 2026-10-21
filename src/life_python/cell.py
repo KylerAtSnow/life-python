@@ -34,4 +34,7 @@ class Cell:
 
     def will_live(self, world: World) -> bool:
         count = self.count_neighbors(world)
-        return (self in world and count in world.survive) or count in world.born
+        return (
+            (self in world and count in world.survive) or
+            (self not in world and count in world.born)
+        )
