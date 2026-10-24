@@ -55,7 +55,7 @@ class World:
         # 101
         # 001
         if dir == 1:
-            self.add(Cell(x+1,y+0))
+            self.add(Cell(x+0,y+1))
             self.add(Cell(x+1,y+1))
             self.add(Cell(x-1,y+0))
             self.add(Cell(x+1,y+0))
